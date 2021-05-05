@@ -5,7 +5,6 @@ export const singleBusiness = (business) => {
             <div class="business__address__full">
                 ${business.addressFullStreet}
                 ${business.addressCity}, ${business.addressStateCode} ${business.addressZipCode}
-                -----------------------------------------------------------------------------------
             </div>
         </section>
     `;
