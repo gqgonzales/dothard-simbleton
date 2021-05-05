@@ -3,11 +3,12 @@ import { singleBusiness } from "./Business.js";
 
 const contentTarget = document.querySelector(".businesses");
 
-export const BusinessList = () => {
-  const businessArray = getBusinesses();
-  contentTarget.innerHTML += "<h1>Active Businesses</h1>";
+const businesses = getBusinesses();
 
-  businessArray.forEach((business) => {
+export const BusinessList = () => {
+  contentTarget.innerHTML = "<h1>Active Businesses</h1>";
+
+  businesses.forEach((business) => {
     contentTarget.innerHTML += singleBusiness(business);
   });
 };
