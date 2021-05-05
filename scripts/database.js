@@ -140,3 +140,7 @@ const businesses = [
     addressCity: "Watrous",
   },
 ];
+
+export const getBusinesses = () => {
+  return [...businesses];
+};
