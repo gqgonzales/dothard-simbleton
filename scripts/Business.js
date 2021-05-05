@@ -1,4 +1,4 @@
-export const Business = (business) => {
+export const singleBusiness = (business) => {
   return `
         <section class="business">
             <h2 class="business__name">${business.companyName}</h2>
