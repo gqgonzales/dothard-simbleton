@@ -1,7 +1,7 @@
 import { getBusinesses } from "./database.js";
-// import { singleNewYorkBusiness } from "./singleNYbusiness.js";
+import { singleNewYorkBusiness } from "./singleNYbusiness.js";
 
-// const contentTarget = document.querySelector("#businessList--newYork");
+const contentTarget = document.querySelector("#businessList--newYork");
 
 let businesses = getBusinesses();
 
@@ -12,11 +12,15 @@ const newYorkBusiness = (business) => {
   return false;
 };
 
-export const newYorkBusinessList = () => {
+export const newYorkBusinesses = () => {
   const filteredItems = businesses.filter(newYorkBusiness);
   return filteredItems;
 };
 
-// contentTarget.innerHTML = "<h1>NY Businesses</h1>";
+export const NYbusinessList = () => {
+  contentTarget.innerHTML = "<h1>NY Businesses</h1>";
 
-//   contentTarget.innerHTML += singleNewYorkBusiness(business);
+  businesses.forEach((business) => {
+    contentTarget.innerHTML += singleNewYorkBusiness(business);
+  });
+};

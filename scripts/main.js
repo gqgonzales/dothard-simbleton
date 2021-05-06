@@ -7,7 +7,7 @@
 // renderAllHTML();
 
 import { BusinessList } from "./BusinessList.js";
-import { newYorkBusinessList } from "./nyBusiness.js";
+import { NYbusinessList } from "./nyBusiness.js";
 
 BusinessList();
-newYorkBusinessList();
+NYbusinessList();
