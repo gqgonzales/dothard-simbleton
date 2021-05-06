@@ -4,6 +4,7 @@ Then iterate the array and display each one in element in your HTML file that ha
 */
 
 import { getBusinesses } from "./database.js";
+import { AgentHTML } from "./Agent.js";
 
 let contentTarget = document.querySelector(".agents");
 
@@ -15,4 +16,13 @@ export const agentsNames = () => {
   });
 
   return justAgents;
+};
+
+const theAgents = agentsNames();
+
+export const finalAgents = () => {
+  contentTarget.innerHTML = "<h1>Purchasing Agents</h1>";
+  theAgents.forEach((agent) => {
+    contentTarget.innerHTML += `${AgentHTML(agent).toString()}`;
+  });
 };

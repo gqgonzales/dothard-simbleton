@@ -9,9 +9,11 @@
 import { BusinessList } from "./BusinessList.js";
 import { newYorkBusinessList } from "./nyBusiness.js";
 import { manufacturingBusinessList } from "./Manufacturing.js";
-import { agentsNames } from "./Agents.js";
+import { agentsNames, finalAgents } from "./PurchasingAgents.js";
 
-BusinessList();
-newYorkBusinessList();
+// BusinessList();
+// newYorkBusinessList();
 manufacturingBusinessList();
-console.log(agentsNames());
+// console.log(agentsNames());
+agentsNames();
+finalAgents();
