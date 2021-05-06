@@ -2,7 +2,6 @@ import { getBusinesses } from "./database.js";
 import { singleBusiness } from "./Business.js";
 
 let contentTarget = document.querySelector(".businessList--newYork");
-contentTarget.innerHTML = "<h1>NY Businesses</h1>";
 
 let businesses = getBusinesses();
 
@@ -18,6 +17,8 @@ export const newYorkBusinessList = () => {
     const filteredItems = businesses.filter(newYorkBusiness);
     return filteredItems;
   };
+
+  contentTarget.innerHTML = "<h1>NY Businesses</h1>";
 
   const nyBusinesses = foundNYbusinesses();
 

@@ -8,6 +8,8 @@
 
 import { BusinessList } from "./BusinessList.js";
 import { newYorkBusinessList } from "./nyBusiness.js";
+import { manufacturingBusinessList } from "./Manufacturing.js";
 
 BusinessList();
 newYorkBusinessList();
+manufacturingBusinessList();
