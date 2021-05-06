@@ -19,3 +19,8 @@ h3 {
   max-width: 50%;
   border-bottom: 2px black solid;
 }
+
+#companySearch {
+  height: 2rem;
+  width: 40%;
+}
