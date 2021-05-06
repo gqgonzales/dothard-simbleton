@@ -13,14 +13,16 @@ export const NYbusinessList = () => {
     return false;
   };
 
-  const findNYbusiness = () => {
+  const foundNYbusinesses = () => {
     const filteredItems = businesses.filter(newYorkBusiness);
     return filteredItems;
   };
 
+  const newNewYorkObject = foundNYbusinesses();
+
   contentTarget.innerHTML = "<h1>NY Businesses</h1>";
 
-  findNYbusiness.forEach((business) => {
+  newNewYorkObject.forEach((business) => {
     contentTarget.innerHTML += singleBusiness(business);
   });
 };
