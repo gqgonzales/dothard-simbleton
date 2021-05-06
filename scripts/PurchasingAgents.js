@@ -10,19 +10,14 @@ let contentTarget = document.querySelector(".agents");
 
 let businesses = getBusinesses();
 
-export const agentsNamesObject = () => {
-  const justAgents = businesses.map((agent) => {
-    return agent.purchasingAgent;
-  });
-
-  return justAgents;
-};
-
-const theAgents = agentsNamesObject();
-
 export const purchasingAgents = () => {
-  contentTarget.innerHTML = "<h1>Purchasing Agents</h1>";
-  theAgents.forEach((agent) => {
-    contentTarget.innerHTML += `${AgentHTML(agent)}`;
+  const agentList = businesses.map((business) => {
+    return {
+      fullName: `${business.purchasingAgent.nameFirst} ${business.purchasingAgent.nameLast}`,
+      company: business.companyName,
+      telephone: business.phoneWork,
+    };
   });
+  contentTarget.innerHTML = "<h1>Purchasing Agents</h1>";
+  agentList.forEach((agent) => (contentTarget.innerHTML += AgentHTML(agent)));
 };
