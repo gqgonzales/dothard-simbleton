@@ -10,4 +10,5 @@ import { BusinessList } from "./BusinessList.js";
 import { NYbusinessList } from "./nyBusiness.js";
 
 BusinessList();
+// console.log(NYbusinessList());
 NYbusinessList();
