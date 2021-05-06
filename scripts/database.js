@@ -156,3 +156,16 @@ export const getBusinesses = () => {
   const copyOfData = [...businesses];
   return copyOfData;
 };
+
+const newYorkBusiness = (business) => {
+  if (business.addressStateCode === "NY") {
+    return true;
+  }
+  return false;
+};
+
+// Create a new array that contains supplies that cost less than $50
+export const newYorkBusinessList = () => {
+  const filteredItems = businesses.filter(newYorkBusiness);
+  return filteredItems;
+};

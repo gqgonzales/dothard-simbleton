@@ -7,5 +7,7 @@
 // renderAllHTML();
 
 import { BusinessList } from "./BusinessList.js";
+import { newYorkBusinessList } from "./database";
 
 BusinessList();
+newYorkBusinessList();
