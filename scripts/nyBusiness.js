@@ -2,10 +2,11 @@ import { getBusinesses } from "./database.js";
 import { singleBusiness } from "./Business.js";
 
 let contentTarget = document.querySelector(".businessList--newYork");
+contentTarget.innerHTML = "<h1>NY Businesses</h1>";
 
 let businesses = getBusinesses();
 
-export const NYbusinessList = () => {
+export const newYorkBusinessList = () => {
   const newYorkBusiness = (business) => {
     if (business.addressStateCode === "NY") {
       return true;
@@ -18,11 +19,9 @@ export const NYbusinessList = () => {
     return filteredItems;
   };
 
-  const newNewYorkObject = foundNYbusinesses();
+  const nyBusinesses = foundNYbusinesses();
 
-  contentTarget.innerHTML = "<h1>NY Businesses</h1>";
-
-  newNewYorkObject.forEach((business) => {
+  nyBusinesses.forEach((business) => {
     contentTarget.innerHTML += singleBusiness(business);
   });
 };
