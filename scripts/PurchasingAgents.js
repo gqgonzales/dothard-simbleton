@@ -10,7 +10,7 @@ let contentTarget = document.querySelector(".agents");
 
 let businesses = getBusinesses();
 
-export const agentsNames = () => {
+export const agentsNamesObject = () => {
   const justAgents = businesses.map((agent) => {
     return agent.purchasingAgent;
   });
@@ -18,11 +18,11 @@ export const agentsNames = () => {
   return justAgents;
 };
 
-const theAgents = agentsNames();
+const theAgents = agentsNamesObject();
 
-export const finalAgents = () => {
+export const purchasingAgents = () => {
   contentTarget.innerHTML = "<h1>Purchasing Agents</h1>";
   theAgents.forEach((agent) => {
-    contentTarget.innerHTML += `${AgentHTML(agent).toString()}`;
+    contentTarget.innerHTML += `${AgentHTML(agent)}`;
   });
 };
