@@ -31,8 +31,12 @@ document
   .querySelector("#agentFirstNameSearch")
   .addEventListener("keypress", (keyPressEvent) => {
     if (keyPressEvent.charCode === 13) {
-      const agentSearch = businesses.find((business) =>
-        business.purchasingAgent.nameFirst.includes(keyPressEvent.target.value)
+      const agentSearch = businesses.find(
+        (business) =>
+          business.purchasingAgent.nameFirst.includes(
+            keyPressEvent.target.value
+          ) ||
+          business.purchasingAgent.nameLast.includes(keyPressEvent.target.value)
       );
 
       const foundAgentObject = singleAgentObject(agentSearch);
