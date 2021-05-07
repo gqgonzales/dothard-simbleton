@@ -12,3 +12,19 @@ export const BusinessList = () => {
     contentTarget.innerHTML += singleBusiness(business);
   });
 };
+
+// Now let's add some search funcitonality.
+
+const companySearchResultArticle = document.querySelector(".foundCompanies");
+
+document
+  .querySelector("#companySearch")
+  .addEventListener("keypress", (keyPressEvent) => {
+    if (keyPressEvent.charCode === 13) {
+      const foundBusiness = businesses.find((business) =>
+        business.companyName.includes(keyPressEvent.target.value)
+      );
+
+      companySearchResultArticle.innerHTML = singleBusiness(foundBusiness);
+    }
+  });
