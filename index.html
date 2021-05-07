@@ -13,26 +13,30 @@
   <body>
     <main id="container">
       <script src="./scripts/main.js" type="module"></script>
-      <h1>~Dothard & Simbleton™~</h1>
-      <h2>~Purveyors of Fine Paper Goods Since 1888~</h2>
-      <input
-        type="text"
-        placeholder="Enter business name..."
-        id="companySearch"
-      />
-      <article class="foundCompanies">
-        <!-- Found companies go here --->
-      </article>
-
-      <input
-        type="text"
-        placeholder="Enter agent first name..."
-        id="agentFirstNameSearch"
-      />
-      <article class="foundAgents">
-        <!-- Found agents go here --->
-      </article>
-
+      <h1 class="header">~Dothard & Simbleton™~</h1>
+      <h2 class="subhead">~Purveyors of Fine Paper Goods Since 1888~</h2>
+      <section class="search__container">
+        <section class="search__bars">
+          <input
+            type="text"
+            placeholder="Enter business name..."
+            id="companySearch"
+          />
+          <input
+            type="text"
+            placeholder="Enter agent first name..."
+            id="agentFirstNameSearch"
+          />
+        </section>
+        <section class="seach__results">
+          <article class="foundCompanies">
+            <!-- Found companies go here --->
+          </article>
+          <article class="foundAgents">
+            <!-- Found agents go here --->
+          </article>
+        </section>
+      </section>
       <article class="businesses">
         <!-- Full bussiness list goes here -->
       </article>

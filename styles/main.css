@@ -11,20 +11,40 @@ h2 {
   font-size: 2rem;
 }
 
+.header,
+.subhead {
+  text-align: center;
+}
+
 h3 {
   font-size: 1.25rem;
 }
 
 .business,
-.agent {
-  max-width: 50%;
+.businessList--newYork,
+.businessList--manufacturing,
+.agents {
+  max-width: 40%;
   border-bottom: 2px black solid;
+  text-indent: 1rem;
+}
+
+.search__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #companySearch,
 #agentFirstNameSearch {
+  justify-content: center;
   height: 2rem;
   width: 40%;
-  margin: 0.5rem 0rem;
+  margin: 0.5rem;
   background-color: antiquewhite;
+}
+
+.foundCompanies,
+.foundAgents {
+  margin: 1rem;
 }

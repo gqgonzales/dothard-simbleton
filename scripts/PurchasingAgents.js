@@ -22,7 +22,6 @@ export const purchasingAgents = () => {
   agentList.forEach((agent) => (contentTarget.innerHTML += AgentHTML(agent)));
 };
 
-
 // How about an agent search?
 // Find purchasing agents by first name
 
@@ -32,13 +31,22 @@ document
   .querySelector("#agentFirstNameSearch")
   .addEventListener("keypress", (keyPressEvent) => {
     if (keyPressEvent.charCode === 13) {
-      const foundAgent = businesses.find((business) =>
+      const agentSearch = businesses.find((business) =>
         business.purchasingAgent.nameFirst.includes(keyPressEvent.target.value)
       );
 
-      agentsFirstNameArticle.innerHTML = AgentHTML(foundAgent);
+      const foundAgentObject = singleAgentObject(agentSearch);
+
+      agentsFirstNameArticle.innerHTML = AgentHTML(foundAgentObject);
     }
   });
 
-  //Let's try setting a new foundAgent object equal to the return value in 16 - 19
-  
+//Let's try setting a new foundAgent object equal to the return value in 16 - 19
+
+let singleAgentObject = (business) => {
+  return {
+    fullName: `${business.purchasingAgent.nameFirst} ${business.purchasingAgent.nameLast}`,
+    company: business.companyName,
+    telephone: business.phoneWork,
+  };
+};

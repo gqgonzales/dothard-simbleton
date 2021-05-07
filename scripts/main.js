@@ -11,8 +11,7 @@ import { newYorkBusinessList } from "./nyBusiness.js";
 import { manufacturingBusinessList } from "./Manufacturing.js";
 import { purchasingAgents } from "./PurchasingAgents.js";
 
-// BusinessList();
-// newYorkBusinessList();
-// manufacturingBusinessList();
-// agentsNames();
-// purchasingAgents();
+BusinessList();
+newYorkBusinessList();
+manufacturingBusinessList();
+purchasingAgents();
