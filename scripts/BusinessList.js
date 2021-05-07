@@ -14,6 +14,7 @@ export const BusinessList = () => {
 };
 
 // Now let's add some search funcitonality.
+// Below is how to search by company name.
 
 const companySearchResultArticle = document.querySelector(".foundCompanies");
 

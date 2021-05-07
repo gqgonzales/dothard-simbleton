@@ -21,3 +21,24 @@ export const purchasingAgents = () => {
   contentTarget.innerHTML = "<h1>Purchasing Agents</h1>";
   agentList.forEach((agent) => (contentTarget.innerHTML += AgentHTML(agent)));
 };
+
+
+// How about an agent search?
+// Find purchasing agents by first name
+
+const agentsFirstNameArticle = document.querySelector(".foundAgents");
+
+document
+  .querySelector("#agentFirstNameSearch")
+  .addEventListener("keypress", (keyPressEvent) => {
+    if (keyPressEvent.charCode === 13) {
+      const foundAgent = businesses.find((business) =>
+        business.purchasingAgent.nameFirst.includes(keyPressEvent.target.value)
+      );
+
+      agentsFirstNameArticle.innerHTML = AgentHTML(foundAgent);
+    }
+  });
+
+  //Let's try setting a new foundAgent object equal to the return value in 16 - 19
+  

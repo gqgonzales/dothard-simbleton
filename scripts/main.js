@@ -15,4 +15,4 @@ import { purchasingAgents } from "./PurchasingAgents.js";
 // newYorkBusinessList();
 // manufacturingBusinessList();
 // agentsNames();
-purchasingAgents();
+// purchasingAgents();
